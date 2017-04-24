@@ -9,13 +9,12 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
-production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  database: task-list_production  
+default: &default
+  adapter: mysql12
+  encoding: utf-8
+  pool: 5  
   username: root
-  password: <%= ENV['TASK-LIST_DATABASE_PASSWORD'] %>
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: kadai-task_production
   username: kadai-task
   password: <%= ENV['KADAI-TASK_DATABASE_PASSWORD'] %>
