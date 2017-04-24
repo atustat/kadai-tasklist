@@ -1,0 +1,13 @@
+/* 極小デバイス(携帯電話、768px未満) */
+/* メディアクエリがない場合はこれが Bootstrap のデフォルト */
+
+/* 小型デバイス(タブレット、768px 以上) */
+@media (min-width: @screen-sm-min) {
+    
+}
+
+/* 中型デバイス(デスクトップ、992px 以上) */
+@media (min-width: @screen-md-min) { ... }
+
+/* 大型デバイス(大画面デスクトップ、1200px 以上) */
+@media (min-width: @screen-lg-min) { ... }
